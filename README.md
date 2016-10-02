@@ -56,4 +56,37 @@ O _Controller_ é o cérebro da aplicação. É o responsável por combinar os _Models
 * Todos os parâmetros "injetáveis" em um recurso JAX-RS, também estão disponíveis para um _Controller_ MVC.
 * O ciclo de vida padrão da instância de um classe, é por requisição no JAX-RS como no MVC. Entretanto, algumas implementações podem suportar outros ciclos de vida via CDI.
 
+##### 1.1.1. Principais Anotações
 
+O Java MVC 1.0 traz algumas anotações, sendo elas:
+
+* @Controller (javax.mvc.annotation.Controller): Quando aplicado a nível de classe, define um Controller MVC. Quando aplicado no método, define uma classe híbrida (controller e recurso JAX-RS).
+* @View (javax.mvc.annotation.View): Quando aplicado à classe, aponta a view para todos os métodos void do controller. Quando aplicado ao método, aponta a view para este método void do controller ou para um método não void quando este retorna _null_.
+* @CsrfValid (javax.mvc.annotation.CsrfValid): Somente pode ser aplicado ao nível de método e requer que um token CSRF seja validado antes da invocação do controller. Falha na validação causa _ForbiddenException_.
+* RedirectScoped (javax.mvc.annotation.RedirectScoped): Pode ser aplicado a tipo, método, ou atributo; indica que um determinado bean está no escopo de redirecionamento.
+
+#### 1.2. Java MVC 1.0 vs JSF
+
+Ambas as tecnologias são baseadas no modelo MVC, mas com algumas diferenças:  
+
+* Java MVC 1.0  
+
+>	1. Action-based MVC.  
+>	2. O design da página Web fica a critério do desenvolvedor.  
+>	3. Processamento manual do parâmetro de request.  
+>	4. A tarefa de manter as validações/conversões ficam por conta do desenvolvedor.  
+>	5. Nenhum estado mantido entre as requisições.
+>	6. Foco na requisição.
+>	7. Suporte limitado para reúso.
+	
+* JSF
+
+>	1. Component-based MVC
+>	2. Componentes são renderizados pelo framework em códigos HTML/JS nas páginas Web.
+>	3. Processamento automático do parâmetro de request.
+>	4. Tarefa de validações/conversões tratadas pelo framework de acordo com as configurações do desenvolvedor.
+>	5. Por padrão, estado é mantido sobre múltiplas requisições, mas o JSF também suporta requisições _stateless_.
+>	6. Foco na página.
+>	7. Componentes favorecem o reúso.
+
+![Figura 1: MVC 1.0 vs JSF](mvc_jsf.png)
