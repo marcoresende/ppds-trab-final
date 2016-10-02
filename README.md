@@ -89,4 +89,4 @@ Ambas as tecnologias são baseadas no modelo MVC, mas com algumas diferenças:
 >	6. Foco na página.
 >	7. Componentes favorecem o reúso.
 
-![Figura 1: MVC 1.0 vs JSF](mvc_jsf.png)
+![Figura 1: MVC 1.0 vs JSF](res/mvc_jsf.png "MVC 1.0 vs JSF")
