@@ -9,7 +9,7 @@ Aluno: Marco Túlio T. Resende
 
 1. Descrição da Tecnologia
 2. Tecnologias Relacionadas
-3. Caso de Uso
+3. Caso Real de Uso da Tecnologia
 4. Livros e Sites para Aprendizado  
 
 
@@ -90,3 +90,57 @@ Ambas as tecnologias são baseadas no modelo MVC, mas com algumas diferenças:
 >	7. Componentes favorecem o reúso.
 
 ![Figura 1: MVC 1.0 vs JSF](res/mvc_jsf.png "MVC 1.0 vs JSF")
+Fonte: [Anghel, 2016]  
+
+### 2. Tecnologias Relacionadas  
+
+#### 2.1. [Spring MVC](https://spring.io/ "Spring Framework") 
+
+O Spring é um framework de aplicação de código-fonte aberto popular que pode facilitar o desenvolvimento do Java EE. Ele consiste em um contêiner, um framework para gerenciar componentes, e um conjunto de serviços de snap-in para interfaces de usuário, transações e persistência da Web. Uma parte do Spring Framework é o Spring Web MVC, um framework MVC extensível para criação de aplicações Web [NETBEANS, 2016].  
+O Spring MVC é desenhado em torno de um _DispatcherServlet_ que despacha requisições para _handlers_. O _handler_ padrão é baseado nas anotações _@Controller_ e _@RequestMapping_, que oferecem uma larga flexibilidade para tratar métodos. Com a introdução da versão 3.0, o mecanismo _@Controller_ também passou a permitir a criação de sites e aplicações com RESTful, através da anotação _@PathVariable_ e outras funcionalidades.  
+
+#### 2.2. [VRaptor](http://www.vraptor.org/pt/ "VRaptor") 
+
+VRaptor é um framework MVC web para desenvolvimento ágil com java. Criado em 2003 no IME-USP, teve sua versão 2.0 lançada em 2005 e a versão 3.0 em 2009. Atualmente mantido pela Caelum e diversos desenvolvedores de outras empresas. Utiliza muitas idéias e boas práticas que surgiram nos últimos anos, como Convenção sobre Configuração, Injeção de Dependências e um modelo REST. É também uma iniciativa brasileira, nascida dentro da Universidade de São Paulo.  
+Tudo que se precisa fazer para criar um controller do VRaptor é adicionar a anotação @Controller. A partir daí o framework já utiliza suas convenções de URLs e JSPs, exigindo o mínimo de configurações.  
+
+#### 2.3. [Apache Struts 2](https://struts.apache.org/ "Struts")  
+
+Apache Struts 2 é um framework de código aberto para desenvolvimento de aplicações Java EE. Ele utiliza e extende a Java Servlet API para incentivar os desenvolvedores a adotarem o modelo MVC. Algumas características do Struts 2 são:
+* Plug-ins: aceita plug-ins disponibilizados por terceiros, assim, não exige que o framework venha com tudo e sim apenas as funcionalidades básicas.  
+* Convenções ao invés de configurações: nomes de classes podem oferecer mapeamento de ações, e valores de resultdos retornados podem oferecer nomes para as páginas JSP serem renderizadas.  
+* Anotação ao invés de configuração XML: disponibiliza anotações para serem utilizadas nas classes, reduzindo a configuração XML.  
+* Conversão de dados: a conversão de valores de campos de formulários baseados em String em objetos ou tipos primitivos, é tratada pela estrutura de suporte.  
+* Injeção de dependência: reduz o acoplamento entre as camadas do aplicativo, tornando-o muito mais simples.  
+
+#### 2.4. [Apache Tapestry](http://tapestry.apache.org/ "Apache Tapestry")   
+
+Apache Tapestry é um framework de código aberto para criação de aplicações Java dinâmicas, robustas e altamente escaláveis. O Tapestry se baseia no padrão Java Servlet API, e funciona em qualquer servlet container ou servidor de aplicação. O framework divide a aplicação Web em um conjunto de páginas, cada uma construída com componentes. Isto fornece uma estrutura consistente, onde o Tapestry assume responsabilidade pelas preocupações chaves, como construção da URL e despache, estado persistente no cliente ou servidor, validação de input do usuário, localização/internacionalização, e relatórios de exceção. O desenvolvimento de aplicações com Tapestry envolve a criação de templates HTML, e a adição de uma classe java para cada.  
+
+#### 2.5. [Play Framework](https://www.playframework.com/ "Play Framework")  
+
+Play é um framework de código aberto, desenvolvido na linguagem Scala e também utilizável na linguagem Java. Utiliza o padrão MVC e aumenta a produtividade utilizando o conceito de _convenção sobre configuração_. Play é baseado em uma arquitetura leve, stateless, amigável e possui como característica o consumo mínimo de recursos (CPU, memória, threads) para criar aplicações altamente escaláveis.  
+
+### 3. Caso Real de Uso da Tecnologia  
+
+Como a previsão para a release final da especificação do Java MVC 1.0 está prevista para 2017, não foi encontrado nenhum caso real de uso com documentação disponível na Web. Portanto, este item do trabalho não será abordado.  
+
+### 4. Livros e Sites para Aprendizado
+
+Ainda não existem muitos materiais disponíveis para a nova especificação. Um dos motivos é que a especificação não foi completamente finalizada. Não foram encontrados livros sobre o tema, entretanto existem alguns sites com introdução ao tema e até alguns exemplos de implementação.
+
+* [JSR 371: Model-View-Controller (MVC 1.0) Specification](https://www.jcp.org/en/jsr/detail?id=371 "JSR 371")  
+
+* [Ozark - Implementação de Referência para o MVC 1.0](https://ozark.java.net/ "Ozark")  
+
+* [Caelum - Primeiros passos com a especificação do MVC 1.0](http://blog.caelum.com.br/primeiros-passos-do-mvc-1-0/ "Caelum")  
+
+* [Introduction to the New MVC 1.0 (Ozark RI)](http://www.developer.com/java/ent/introduction-to-the-new-mvc-1.0-ozark-ri.html "Ozark RI")  
+
+* [MVC 1.0 in Java EE 8 - How to work with Controllers](http://www.bennet-schulz.com/2015/10/javaee-mvc-controllers.html)  
+
+* [MVC 1.0 in Java EE 8 - Getting Started with NetBeans 8.1 and Payara 4.1](https://dzone.com/articles/mvc-10-in-java-ee-8-getting-started-with-netbeans)  
+
+* [MVC 1.0 in Java EE 8: Getting Started Using Facelets](https://itblog.inginea.eu/index.php/mvc-1-0-in-java-ee-8-getting-started-using-facelets/)  
+ 
+
