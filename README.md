@@ -11,6 +11,7 @@ Aluno: Marco Túlio T. Resende
 2. Tecnologias Relacionadas
 3. Caso Real de Uso da Tecnologia
 4. Livros e Sites para Aprendizado  
+5. Código Mínimo que Mostre a Tecnologia em Contexto 
 
 
 ### 1. Descrição da Tecnologia
@@ -142,5 +143,32 @@ Ainda não existem muitos materiais disponíveis para a nova especificação. Um dos
 * [MVC 1.0 in Java EE 8 - Getting Started with NetBeans 8.1 and Payara 4.1](https://dzone.com/articles/mvc-10-in-java-ee-8-getting-started-with-netbeans)  
 
 * [MVC 1.0 in Java EE 8: Getting Started Using Facelets](https://itblog.inginea.eu/index.php/mvc-1-0-in-java-ee-8-getting-started-using-facelets/)  
- 
+
+### 5. Código Mínimo que Mostre a Tecnologia em Contexto  
+
+O código contido neste repositório foi obtido através do tutorial disponibilizado no seguinte site:  
+
+[Shipping MVC 1.0 into Glassfish 5](https://istanbul-jug.org/2016/03/shipping-mvc-1-0-into-glassfish-5/)  
+
+* **Configuração:**  
+
+1. Baixar o Glassfish 5 nightly build no seguinte link:  
+
+[http://download.oracle.com/glassfish/5.0/nightly/index.html](http://download.oracle.com/glassfish/5.0/nightly/index.html)  
+
+2. Extrair o zip baixado e copiar o [javax.mvc-1.0.jar](https://github.com/rahmanusta/ozark/releases/tag/v1.0)  para o diretório $GF_HOME/glassfish/modules. Após, vá para o diretório bin pelo terminal e inicialize o Glassfish com o seguinte comando:
+
+	asadmin start-domain  
+	
+3. Construa o projeto utilizando o Maven no repositório do código de demonstração:
+
+	mvn clean install  
+
+4. Será gerado um arquivo "mvc.jar" no diretório _target_. Execute o seguinte comando para realizar o deploy do demo no Glassfish:
+
+	asadmin deploy target/mvc.war  
+	
+5. Acesse o navegador no endereço [http://localhost:8080/mvc/app/person](http://localhost:8080/mvc/app/person) e teste a aplicação.
+
+![Demonstração](res/appdemo.png) 
 
